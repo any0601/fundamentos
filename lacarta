@@ -1,0 +1,36 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <iostream>
+
+using namespace std;
+int main(){
+    float peso,costo; 
+    cout<<"ingresar el peso (en gramos ) de la carta: ";
+    cin>>peso; 
+    if (peso > 0 && peso <= 500){
+        if(peso <= 50)
+        costo = 1.5; 
+        else {
+            if (peso <=100)
+               costo= 6;
+               else{
+                   if (peso <= 350)
+                       costo = 10.5;
+                       else 
+                            costo = 15;
+               }
+        
+        }
+        cout << "El costo de enviar su carta es: " << costo;
+    }
+    else 
+         cout << "NO PUEDE ENVIAR COMO CARTA. ";
+
+    return 0;
+}
