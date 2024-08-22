@@ -1,0 +1,51 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+  GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+  C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, COBOL, HTML, CSS, JS
+  Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <iostream>
+
+using namespace std;
+
+int determinarEstacion(int dia, int mes) {
+    if ((mes == 3 && dia >= 21) || (mes > 3 && mes < 6) || (mes == 6 && dia < 21)) {
+        return 3; // Otoño
+    } else if ((mes == 6 && dia >= 21) || (mes > 6 && mes < 9) || (mes == 9 && dia < 21)) {
+        return 4; // Invierno
+    } else if ((mes == 9 && dia >= 21) || (mes > 9 && mes < 12) || (mes == 12 && dia < 21)) {
+        return 1; // Primavera
+    } else {
+        return 2; // Verano
+    }
+}
+
+int main() {
+    int dia, mes, año, estacion;
+
+    // Ingresar la fecha: día, mes y año
+    cout << "Introduce el dia: ";
+    cin >> dia;
+    cout << "Introduce el mes: ";
+    cin >> mes;
+    cout << "Introduce el anio: ";
+    cin >> año;
+
+    // Determinar la estación
+    estacion = determinarEstacion(dia, mes);
+
+    // Mostrar la estación con números
+    if (estacion == 1) {
+        cout << "Es primavera." << endl;
+    } else if (estacion == 2) {
+        cout << "Es verano." << endl;
+    } else if (estacion == 3) {
+        cout << "Es otono." << endl;
+    } else if (estacion == 4) {
+        cout << "Es invierno." << endl;
+    }
+
+    return 0;
+}
