@@ -1,0 +1,50 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <iostream>
+#include<math.h>
+
+using namespace std;
+
+int main()
+{
+    float x1,x2,x3,y1,y2,y3;
+    float a,b,c,d,e,f,h,k,r,m;
+    
+    cout<<"Ingrese la coordenada x1: ";
+    cin>>x1;
+    cout<<"Ingresar la coordenada y1: ";
+    cin>>y1;
+    cout<<"ingrese la coordenada x2: ";
+    cin>>x2;
+    cout<<"ingrese la coordenada y2: ";
+    cin>>y2;
+    cout<<"ingrese la coordenada x3: ";
+    cin>>x3; 
+    cout<<"ingrese la coordenada y3: ";
+    cin>>y3;
+    
+    a=(x2*x2-x1*x1)+(y2*y2-y1*y1);
+    b=(x3*x3-x2*x2)-(y3*y3-y2*y2);
+    c=(a*(y3-y2))-(b*(y2-y1));
+    d=(2*(x2-x1)*(y3-y2))-(2*(x3-x2)*(y2-y1));
+    
+    h=c/d;
+    
+    e=(a*(x3-x2))-(b*(x2-x1));
+    f=(2*(x3-x2)*(y2-y1))-(2*(x2-x1)*(y3-y2));
+    
+    k=e/f;
+    
+    m=sqrt((x1-h)*(x1-h)+(y1-k)*(y1-k));
+    
+    cout<<"las coordenadas del centro son: ("<<h<<","<<k<<")"<< endl;
+    cout<<"el radio es: "<<m<<endl;
+
+    return 0;
+}
