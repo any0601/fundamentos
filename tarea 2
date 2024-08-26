@@ -1,0 +1,54 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int numero1,numero2,numero3,numero4,numero5,mayor,menor;
+    float r;
+    cout<<"Ingresar el primer numero: ";
+    cin>>numero1;
+    if(mayor<numero1)
+    mayor=numero1;
+    if(menor>numero1)
+    menor=numero1;
+    
+    cout<<"ingresar el segundo numero: ";
+    cin>>numero2;
+    if (mayor<numero2)
+    mayor=numero2;
+    if(menor>numero2)
+    menor=numero2;
+    
+    cout<<"ingresar el tercer numero: ";
+    cin>>numero3;
+    if(mayor<numero3)
+    mayor=numero3; 
+    if(menor>numero3)
+    menor=numero3;
+    
+    cout<<"ingresar el cuarto numero: ";
+    cin>>numero4;
+    if(mayor<numero4)
+    mayor=numero4; 
+    if(menor>numero4)
+    menor=numero4;
+    
+    cout<<"ingresar el quinto numero: ";
+    cin>>numero5;
+    if(mayor<numero5)
+    mayor=numero5;
+    if(menor>numero5)
+    menor=numero5;
+    cout<<"el numero mas alto es: "<<mayor;
+
+    return 0;
+}
