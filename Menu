@@ -1,0 +1,86 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <iostream>
+#include <math.h>
+using namespace std; 
+
+int main()
+{
+    //declarar variables 
+    int opcion; //si se declara char
+    float r,l,a,ladoA,ladoB,ladoC,semiperimetro,area, peso,costo,suma,i,n;
+    do{
+        //las opciones del menu que le van a ofertar al usuario 
+        cout<<"MENU"<<endl;
+        cout<<"==="<< endl;
+        cout<<"1. El area del triangulo "<<endl; 
+        cout<<"2.Costo del envio de la carta "<<endl;
+        cout<<"3.numeros pares  "<<endl;
+        cout<<"0.salir "<<endl;
+        //se pide una de las opciones del menu 
+        cout<<"ingrese la opcion que desea: ";
+        cin>> opcion; 
+        //se realizan instrucciones dependiendo de la variable opcion 
+        switch (opcion) {
+            case 1: {//colocar las instrucciones que corresponden a la primera opcion 
+                 cout<<"escribe el lado A";
+                 cin >>ladoA ;
+                 cout<<"escribe el lado B";
+                 cin>>ladoB;
+                 cout<<"escribe el lado C";
+                 cin>>ladoC;
+                 semiperimetro=(ladoA+ladoB+ladoC)/2;
+                 area=sqrt(semiperimetro*(semiperimetro-ladoA)*(semiperimetro-ladoB)*(semiperimetro-ladoC));
+                 cout<<"el area del triangulo es"<<area;
+                break;
+                }
+        
+            case 2: 
+                cout<<"ingresar el peso (en gramos ) de la carta: ";
+                cin>>peso; 
+                if (peso > 0 && peso <= 500){
+                    if(peso <= 50)
+                        costo = 1.5; 
+                        else {
+                            if (peso <=100)
+                            costo= 6;
+                            else{
+                                if (peso <= 350)
+                                costo = 10.5;
+                                else 
+                                    costo = 15;
+               }
+        
+        }
+        cout << "El costo de enviar su carta es: " << costo<<endl;
+    }
+    else 
+         cout << "NO PUEDE ENVIAR COMO CARTA. ";
+
+                break; 
+                
+            case 3:
+                cout<<"ingresar numero: ";
+                cin>>n;
+                i=1;
+                suma= 0;
+                while(i<=n){
+                    suma=suma+i;
+                    i=i+2;
+                }
+                cout<<"la suma es: "<<suma;
+                break; 
+                
+            case 0: cout<<"salir"<<endl;
+                break; 
+            default: cout<< "opcion valida"<< endl;
+        }
+    }while(opcion !=0);
+    return 0;
+}
