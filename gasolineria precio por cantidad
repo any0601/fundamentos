@@ -1,0 +1,73 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Definición de variables en una sola línea
+    float litrosGasolina, precioGasolina, litrosDiesel, precioDiesel, litrosEtanol, precioEtanol;
+
+    // Entrada de datos con validación
+    cout << "Ingrese la cantidad de litros de gasolina: ";
+    do {
+        cin >> litrosGasolina;
+        if (litrosGasolina < 0) {
+            cout << "Entrada inválida. Por favor ingrese un número positivo: ";
+        }
+    } while (litrosGasolina < 0);
+    
+    cout << "Ingrese el precio por litro de gasolina: ";
+    do {
+        cin >> precioGasolina;
+        if (precioGasolina < 0) {
+            cout << "Entrada inválida. Por favor ingrese un número positivo: ";
+        }
+    } while (precioGasolina < 0);
+
+    cout << "Ingrese la cantidad de litros de diesel: ";
+    do {
+        cin >> litrosDiesel;
+        if (litrosDiesel < 0) {
+            cout << "Entrada inválida. Por favor ingrese un número positivo: ";
+        }
+    } while (litrosDiesel < 0);
+    
+    cout << "Ingrese el precio por litro de diesel: ";
+    do {
+        cin >> precioDiesel;
+        if (precioDiesel < 0) {
+            cout << "Entrada inválida. Por favor ingrese un número positivo: ";
+        }
+    } while (precioDiesel < 0);
+
+    cout << "Ingrese la cantidad de litros de etanol: ";
+    do {
+        cin >> litrosEtanol;
+        if (litrosEtanol < 0) {
+            cout << "Entrada inválida. Por favor ingrese un número positivo: ";
+        }
+    } while (litrosEtanol < 0);
+    
+    cout << "Ingrese el precio por litro de etanol: ";
+    do {
+        cin >> precioEtanol;
+        if (precioEtanol < 0) {
+            cout << "Entrada inválida. Por favor ingrese un número positivo: ";
+        }
+    } while (precioEtanol < 0);
+
+    // Cálculo de ingresos
+    float totalGasolina = litrosGasolina * precioGasolina;
+    float totalDiesel = litrosDiesel * precioDiesel;
+    float totalEtanol = litrosEtanol * precioEtanol;
+
+    // Cálculo del total recaudado
+    float totalRecaudado = totalGasolina + totalDiesel + totalEtanol;
+
+    // Mostrar resultados
+    cout << "\nResultados:\n";
+    cout << "Total recaudado por gasolina: " << totalGasolina << " bs" << endl;
+    cout << "Total recaudado por diesel: " << totalDiesel << " bs" << endl;
+    cout << "Total recaudado por etanol: " << totalEtanol << " bs" << endl;
+    cout << "Total recaudado en el día: " << totalRecaudado << " bs" << endl;
+
+    return 0;
+}
