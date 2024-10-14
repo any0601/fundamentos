@@ -1,0 +1,45 @@
+#include <iostream>
+
+using namespace std; 
+
+int main() {
+    int prod1, prod2, prod3, prod4, prod5, suma, promedio, mayor, menor; 
+
+    // Ingreso de datos
+    cout << "Favor de ingresar la cantidad del primer producto: ";
+    cin >> prod1; 
+    cout << "Favor de ingresar la cantidad del segundo producto: ";
+    cin >> prod2; 
+    cout << "Favor de ingresar la cantidad del tercer producto: ";
+    cin >> prod3; 
+    cout << "Favor de ingresar la cantidad del cuarto producto: ";
+    cin >> prod4; 
+    cout << "Favor de ingresar la cantidad del quinto producto: ";
+    cin >> prod5; 
+    
+    // Suma de productos
+    suma = prod1 + prod2 + prod3 + prod4 + prod5;
+    cout << "El total del producto es: " << suma << endl; 
+
+    // Promedio
+    promedio = suma / 5;
+    cout << "El promedio del invernadero es: " << promedio << endl; 
+
+    // Determinar el mayor producto
+    mayor = prod1;
+    if (prod2 > mayor) mayor = prod2;
+    if (prod3 > mayor) mayor = prod3;
+    if (prod4 > mayor) mayor = prod4;
+    if (prod5 > mayor) mayor = prod5;
+    cout << "El producto con la mayor cantidad tiene: " << mayor << endl; 
+
+    // Determinar el menor producto
+    menor = prod1;
+    if (prod2 < menor) menor = prod2;
+    if (prod3 < menor) menor = prod3;
+    if (prod4 < menor) menor = prod4;
+    if (prod5 < menor) menor = prod5;
+    cout << "El producto con la menor cantidad tiene: " << menor << endl; 
+
+    return 0;
+}
