@@ -1,0 +1,17 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std; 
+
+int main() {
+	double mati, edu = 0; 
+	for (int i = 0; i < 5; i++) {
+		cout << "ingresar variable:";
+		cin >> mati;
+		edu = edu + mati;
+	}
+
+	cout << "El promedio es: " << edu / 5;
+
+	return 0; 
+}
