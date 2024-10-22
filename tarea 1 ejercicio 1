@@ -1,0 +1,26 @@
+#include <iostream>
+#include <math.h>
+using namespace std;  
+
+int main()
+{
+    float a, b , temp ; 
+   
+    do {
+        cout << "Ingresar un entero: ";
+        cin >> a;
+    } while (floor(a) != a); //! es negacion 
+    do{
+        cout << "ingresar segundo entero: ";
+        cin >> b;
+    } while (floor(b) != b);
+
+    temp = a; 
+    a = b;
+    b = temp;
+
+    cout << "el primer valor seria: " << a << endl; 
+    cout << "el segundo valor es: " << b << endl; 
+
+    return 0;
+}
