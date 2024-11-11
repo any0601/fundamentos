@@ -1,0 +1,26 @@
+#include <iostream>
+#include<math.h>
+
+using namespace std; 
+
+float resultado(float l1,  float l2, float l3 , float p);
+
+int main()
+{
+    float l1, l2, l3 , p ;
+    cout << "ingresar el lado izquierdo del triangulo: "; 
+    cin >> l1; 
+    cout << "ingresar el lado derecho del triangulo: ";
+    cin >> l2;
+    cout << "ingresar la parte de abajo del triangulo: ";
+    cin >> l3;
+    p=(l1 + l2 + l3) / 2;
+    cout << "el semiperimetro es :" << p << endl; 
+    cout << "el resultado es: " << resultado(l1, l2, l3 , p );
+    return 0; 
+}
+
+float resultado(float l1,  float l2, float l3 , float p ) { 
+    float r = sqrt(p * (p - l1) * (p - l2) * (p - l3));
+    return r; 
+}
